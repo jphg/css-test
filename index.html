@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta description="Walk cicle made with sprite sheet image and css. KEA 1st semester">
+        <title>walk cicle</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            #man{width:120px;
+                height:180px;
+                overflow:hidden;
+                animation: moveRight 8s linear infinite;
+
+            }
+            #man img{
+                animation: walk 1s steps(8) infinite;
+            }
+            #shape img{
+                animation: pendule 4s alternate infinite;
+                transform: translate(40px, 50px) rotate(-90deg);
+
+                transform-origin: top left;
+            }
+
+            @keyframes _walk{
+                to{
+                    transform: translate(-960px);
+                }
+            }
+            @keyframes _moveRight{
+                to{
+                    transform: translate(1000px)
+                }
+            }
+            @keyframes _endule{
+                from{
+                    transform: translate(-90deg)
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+
+            }
+
+            #mouth{width:577px;
+                height:272px;
+                overflow:hidden;
+
+
+            }
+            #mouth:target img{
+                animation: talk .5s steps(3) alternate infinite;
+            }
+
+            @keyframes talk{
+                to{
+                    transform: translate(-1731px);
+                }
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div id="shape">
+            <img src="ball_squeezed.png" alt=" shape">
+        </div>
+        <div id="mouth">
+            <a href="#mouth"><img src="mouths.png" id="mouthImg" alt="mouth"></a>
+        </div>
+        <a href="#stop">STOP</a>
+        <div id="man">
+            <img src="walking.png" alt="walk cicle">
+        </div>
+
+
+    </body>
+</html>
